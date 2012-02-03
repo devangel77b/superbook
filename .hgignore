@@ -4,5 +4,7 @@ syntax: glob
 *.aux
 *.out
 *.pdf
+*.log
+*.toc
 
 syntax: regexp
