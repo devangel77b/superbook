@@ -1,0 +1,8 @@
+syntax: glob
+*~
+*.synctex.gz
+*.aux
+*.out
+*.pdf
+
+syntax: regexp
