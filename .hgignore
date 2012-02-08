@@ -9,5 +9,6 @@ syntax: glob
 *.DS_Store
 *.bbl
 *.blg
+*.idx
 
 syntax: regexp
