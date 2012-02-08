@@ -10,5 +10,8 @@ syntax: glob
 *.bbl
 *.blg
 *.idx
+*.lof
+*.lot
+*.toc
 
 syntax: regexp
