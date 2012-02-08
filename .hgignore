@@ -6,5 +6,8 @@ syntax: glob
 *.pdf
 *.log
 *.toc
+*.DS_Store
+*.bbl
+*.blg
 
 syntax: regexp
