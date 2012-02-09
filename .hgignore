@@ -13,5 +13,8 @@ syntax: glob
 *.lof
 *.lot
 *.toc
+._*
+*.ilg
+*.ind
 
 syntax: regexp

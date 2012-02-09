@@ -1,1 +1,14 @@
-Hello world
+2012/02/10
+
+How to compile:  
+1.  Run pdfLaTeX on main.tex 
+2.  Run bibtex on main.tex
+3.  Run bibtex on each chapter file (e.g. ch-solids.tex) that you have changed or worked on.
+4.  Run pdfLaTeX twice.
+5.  Run makeindex on main.tex
+6.  Run pdfLaTeX twice. 
+
+Perhaps there is some way to make a Make file that will just do this all automatically?  
+
+
+

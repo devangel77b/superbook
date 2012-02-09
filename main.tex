@@ -17,10 +17,10 @@
 
 % PDF metadata
 \usepackage{hyperref}
-\hypersetup{pdftitle={Aerial righting and directed aerial descent during ontogeny in Chukar Partridge (\emph{Alectoris chukar})}}
-\hypersetup{pdfauthor={D. Evangelista et al.}}
+\hypersetup{pdftitle={Biomechanics made Ridiculously Simple, Straightfoward and Interesting}}
+\hypersetup{pdfauthor={at least D. Evangelista and Talia Y. Moore}}
 \hypersetup{pdfsubject={biology}}
-\hypersetup{pdfkeywords={biomechanics, flight, ontogeny, Chukar, \emph{Alectoris chukar}, maneuver, righting, directed aerial descent, controlled flapping descent}}
+\hypersetup{pdfkeywords={biomechanics}}
 \hypersetup{colorlinks=true,citecolor=Violet,linkcolor=Blue,urlcolor=Red}
 
 % Biology style references
@@ -40,24 +40,36 @@
 
 % Title information
 \title{Biomechanics made Ridiculously Simple, Straightforward, and Interesting}
-\author{At least Dennis Evangelista and Talia Y. Moore}
+\author{edited by at least Dennis Evangelista and Talia Y. Moore}
 \date{\today}
 
 \begin{document}
 \maketitle
 
-
+\pagestyle{plain}
+\pagenumbering{roman}
+\include{dedication/dedication}
 \include{preface/preface}
+
+\addcontentsline{toc}{chapter}{Contents}
 \tableofcontents
 \listoffigures
 \listoftables
 
 % chapters here
+\clearpage
+\pagestyle{plain}
+\pagenumbering{arabic}
+\include{ch-whybiomex/ch-whybiomex}
 \include{ch-solids/ch-solids}
+\include{ch-fluids/ch-fluids}
 
 % appendices here
-% \appendix
-% \include{app-formulas/app-formulas}
-\index{test}
+\appendix
+\include{app-test/test}
+
+\cleardoublepage
+\pagestyle{plain}
+\addcontentsline{toc}{chapter}{Index}
 \printindex
 \end{document}
