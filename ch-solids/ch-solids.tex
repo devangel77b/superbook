@@ -4,7 +4,7 @@
 \rcskwsave{$Author$}
 \rcskwsave{$Date$} 
 \rcskwsave{$Revision$}
-\rcsRegisterAuthor{devangel}{Dennis J. Evangelista}
+\rcsRegisterAuthor{devangel}{Dennis J. Evangelista and Talia Y. Moore?}
 
 
 
@@ -12,25 +12,31 @@
 \label{ch:Solids}
 \index{solids}
 % chapter author here?
-% chapter abstract here?
+% chapter abstract?
+\section{Introduction: What makes a solid so solid?}
 Solid materials are ubiquitous in biology. Animals have hard claws that they use to dig or climb with. Mollusks have shells to protect their soft bodies. Your bones give your muscles something stiff to move around. If things weren't solid, nothing would have much structure and we'd all be living in a primordial soup.
 
-You probably think you know what a solid is. But what makes a solid so solid?Our first intuition is that a solid can be picked up and put down. It's got a shape that doesn't change with time. These intuitive feelings you have about solids can be translated into equations. In fact, Richard Hooke did so in the 1600's. He came up with these general features of ideal solids: 
+Solids have material and structural properties.
+
+\section{Material Properties of Solids}
+
+You probably think you know what a solid is. Our first intuition is that a solid can be picked up and put down. It's got a shape that doesn't change with time. These intuitive feelings you have about solids can be translated into equations. In fact, Richard Hooke did so in the 1600's. He came up with these general features of ideal solids: 
 
 \begin{itemize}
-\item Solids have a shape
-\item Solids can be stretched or squished
-\item Solids resist shear
+\item Solids have a shape that doesn't change when it's just sitting there
+\item Solids can be stretched or squished a little
+\item Solids resist being sheared
 \item Under enough force, solids can break
+\item When stretched or squished, the volume remains constant
 \end{itemize}
 
-Let play with a block of a solid, and for this example it's a block of rubber. If we stretch it, it will resist. How much? That depends on how hard you pull and the cross-sectional area of the block. This is called stress, and is represented with $\sigma$.
+Let's play with a block of a solid, and for this example it's a block of rubber. If we stretch it, it will resist. How much? That depends on 1) how hard you pull and 2) the cross-sectional area of the block. This is called \emph{\textbf{stress}}, and is represented with $\sigma$.
 \begin{equation}
 \sigma = \frac{F}{A}
 \end{equation}
 where F is the force, and A is the cross-sectional area of the block.
 
-Say we pull pretty hard on the block of rubber. It's probably going to stretch. If you have a huge block and a tiny block and you stretch them to the same length, one is going to resist much more than the other. This is why we have to scale the stretch to the length of the original block. This is called strain, and is represented with $\varepsilon$.
+Say we pull pretty hard on the block of rubber. It's probably going to stretch. If you have a huge block and a tiny block and you stretch them to the same length, one is going to resist much more than the other. This is why we have to scale the stretch to the length of the original block. This is called \emph{\textbf{strain}}, and is represented with $\varepsilon$.
 \begin{equation}
 \varepsilon = \frac{L-L_o}{L_o}
 \end{equation}
@@ -41,13 +47,26 @@ Now that we have ways to measure the behavior of solids, we'd like to be able to
 E = \frac{\sigma}{\varepsilon}
 \end{equation}
 
-If the Young's Modulus is independent of stress and strain, we call this solid an Ideal or Hookean Solid.
+If the Young's Modulus is independent of stress and strain, we call this solid an \emph{\textbf{Ideal}} or \emph{\textbf{Hookean Solid}}. This means that when we push or pull on a solid, we know how much the length has changed, regardless of how long it is. But if our solid is isovolumetric (the volume doesn't change), and the length changes, that means that the cross-sectional area of the solid must change as well. To predict the change in length in the axes orthogonal to the primary strain axis (the axis along which you are applying the stress), we use Poisson's ratio, which is represented by $\nu$. 
+\begin{equation}
+\nu_{zx} = \- \frac{\varepsilon_x}{\varepsilon_z}
+\end{equation}
+\begin{equation}
+\nu_{zy} = \- \frac{\varepsilon_y}{\varepsilon_z}
+\end{equation}
 
-Poisson's ratio
+Isovolumetric materials have $\nu$ = 0.5. \emph{\textbf{Isotropic}} materials have three equal Poisson's ratios, one in each orthogonal axis. However, many biological materials can have different Poisson's ratios for different axes, and these are called \emph{\textbf{Anisotropic}}.
 
-Solids are evil. That is why the Dominion \index{Dominion War} wages war against them \citep{Son-of-Moog:2488}.
+Additionally, Hookean solids have the cool property that they have equal strain given positive or negative stress (eg. whether we put the solid in compression or tension). 
+
+Ok so we've talked about squishing and pulling a solid, but what is shear?
+
+\section{Structural Properties of Solids}
+
+
 
 \section{History of solid aggression in the Gamma Quadrant}
+Solids are evil. That is why the Dominion \index{Dominion War} wages war against them \citep{Son-of-Moog:2488}.
 \section{Weaknesses of solids and Dominion anti-solid strategies and tactics}
 \begin{figure}[h!]
  \label{jaculus}
