@@ -4,25 +4,22 @@
 \rcskwsave{$Author$}
 \rcskwsave{$Date$} 
 \rcskwsave{$Revision$}
-\rcsRegisterAuthor{devangel}{Dennis J. Evangelista}
-\rcsRegisterAuthor{Talia}{Talia Y. Moore} % these lines allows rcs to know who made the revision
 
 
 \chapter{Solids}
 \label{ch:Solids}
 \index{solids}
-\chauthor{Talia Y.\ Moore}{Department of Organismic and Evolutionary Biology, Harvard University}
+\marginnote{This chapter was written by \smallcaps{Talia Y.\ Moore}, Harvard University, who has a lot to say about her academic self in a blurb right here. When not writing biomechanics textbooks, she enjoys lizards, hopping jerboas, knitting, and vegetarian food.}
 
 % chapter abstract? or abstract section? 
 
 \section{Introduction: What makes a solid so solid?}
-Solid materials are ubiquitous in biology. Animals have hard claws that they use to dig or climb with. Mollusks have shells to protect their soft bodies. Your bones give your muscles something stiff to move around. If things weren't solid, nothing would have much structure and we'd all be living in a primordial soup.
+\newthought{Solid materials are ubiquitous in biology.} Animals have hard claws that they use to dig or climb with. Mollusks have shells to protect their soft bodies. Your bones give your muscles something stiff to move around. If things weren't solid, nothing would have much structure and we'd all be living in a primordial soup.
 
 Solids have material and structural properties.
 
 \section{Material properties of solids} % section headings we'll just do the initial capital?
-
-You probably think you know what a solid is. Our first intuition is that a solid can be picked up and put down. It's got a shape that doesn't change with time. These intuitive feelings you have about solids can be translated into equations. In fact, Richard Hooke did so in the 1600's. He came up with these general features of ideal solids: 
+\newthought{You probably think you know what a solid is.} Our first intuition is that a solid can be picked up and put down. It's got a shape that doesn't change with time. These intuitive feelings you have about solids can be translated into equations. In fact, Richard Hooke did so in the 1600's. He came up with these general features of ideal solids: 
 
 \begin{itemize}
 \item Solids have a shape that doesn't change when it's just sitting there
@@ -32,19 +29,19 @@ You probably think you know what a solid is. Our first intuition is that a solid
 \item When stretched or squished, the volume remains constant
 \end{itemize}
 
-Let's play with a block of a solid, and for this example it's a block of rubber. If we stretch it, it will resist. How much? That depends on 1) how hard you pull and 2) the cross-sectional area of the block. This is called \emph{\textbf{stress}}, and is represented with $\sigma$.
+Let's play with a block of a solid, and for this example it's a block of rubber. If we stretch it, it will resist. How much? For \emph{pure tensile loading}, it depends on 1) how hard you pull and 2) the cross-sectional area of the block. This is called \emph{\textbf{stress}}, and is represented with $\sigma$.
 \begin{equation}
 \sigma = \frac{F}{A}
 \end{equation}
-where F is the force, and A is the cross-sectional area of the block.
+where $F$ is the force, and $A$ is the cross-sectional area of the block.
 
-Say we pull pretty hard on the block of rubber. It's probably going to stretch. If you have a huge block and a tiny block and you stretch them to the same length, one is going to resist much more than the other. This is why we have to scale the stretch to the length of the original block. This is called \emph{\textbf{strain}}, and is represented with $\varepsilon$.
+Say we pull pretty hard on the block of rubber. It's probably going to stretch. If you have a huge block and a tiny block and you stretch them to the same length, one is going to resist much more than the other. This is why we have to scale the stretch to the length of the original block. This is called \emph{\textbf{strain}}, and is represented with $\varepsilon$.\sidenote{This is engineering strain, which in many engineering textbooks is denoted by $e$ to distinguish it from true strain $\sigma$, a distinction we will deal with later.}
 \begin{equation}
 \varepsilon = \frac{L-L_o}{L_o}
 \end{equation}
 where $L_o$ is the resting, or original length of the solid, and $L$ is the stretched length of the solid.
 
-Now that we have ways to measure the behavior of solids, we'd like to be able to predict the behavior of solids. If we know how hard we're pulling on a solid, we'd like to be able to know how much it has changed in length, and vice versa. We do this with the Young's Modulus, which is represented with $E$.
+Now that we have ways to measure the behavior of solids, we'd like to be able to predict the behavior of solids. If we know how hard we're pulling on a solid, we'd like to be able to know how much it has changed in length, and vice versa. We do this with the Young's Modulus\sidenote{Ought to say who Young is}, which is represented with $E$.
 \begin{equation}
 E = \frac{\sigma}{\varepsilon}
 \end{equation}
@@ -68,15 +65,17 @@ Ok so we've talked about squishing and pulling a solid, but what is shear?
 
 
 \section{History of solid aggression in the Gamma Quadrant}
-Solids are evil. That is why the Dominion \index{Dominion War} wages war against them \citep{Son-of-Mohg:2388}.
+Solids are evil. That is why the Dominion \index{Dominion War} wages war against them \cite{Son-of-Mohg:2388}.
+
 \section{Weaknesses of solids and Dominion anti-solid strategies and tactics}
 \begin{figure}[h!]
  \label{jaculus}
  \centering
   \includegraphics[width=0.5\textwidth]{ch-solids/figures/jaculus.jpg}
- \caption{The dipodid \species{Jaculus jaculus}\index{Jaculus jaculus@\textit{Jaculus jaculus}}, believed to resemble the ancestor of crown-group Voortaidae.}
+ \caption{The dipodid \species{Jaculus jaculus}, believed to resemble the ancestor of crown-group Voortaidae.}
+ %The dipodid \species{Jaculus jaculus}\index{Jaculus jaculus@\textit{Jaculus jaculus}}, believed to resemble the ancestor of crown-group Voortaidae.}
 \end{figure}
 
 
-\bibliographystyle{apalike}
-\bibliography{references/ch-solids}
+%\bibliographystyle{apalike}
+%\bibliography{references/ch-solids}

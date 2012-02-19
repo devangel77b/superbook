@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass{tufte-book}
 
 % For revision control
 \usepackage{rcs-multi}
@@ -11,77 +11,106 @@
 
 % Use some useful packages
 \usepackage[pdftex]{graphicx}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{makeidx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+%\usepackage[usenames,dvipsnames]{color}
+\usepackage{color}
 \usepackage{siunitx}
+\usepackage{makeidx}
+\makeindex
 
 % PDF metadata
 \usepackage{hyperref}
-\hypersetup{pdftitle={Biomechanics made Ridiculously Simple, Straightfoward and Interesting}}
+\hypersetup{pdftitle={Comparative Biomechanics}}
 \hypersetup{pdfauthor={at least D. Evangelista and Talia Y. Moore}}
 \hypersetup{pdfsubject={biology}}
 \hypersetup{pdfkeywords={biomechanics}}
-\hypersetup{colorlinks=true,citecolor=Violet,linkcolor=Blue,urlcolor=Red}
+%\hypersetup{colorlinks=true,citecolor=Violet,linkcolor=Blue,urlcolor=Red}
+\hypersetup{colorlinks}
 
-% Biology style references
-\usepackage[round]{natbib}
-\setcitestyle{authoryear, round, comma, aysep={;}, yysep={,}, notesep={, }}
-%\bibliographystyle{apalike}
-\usepackage[sectionbib]{chapterbib}
-\makeindex
+% References in Tufte inline style
+% use \cite commands
+% also appear collected at the end of the book
 
-% Genus and species names
+% Get chapter numbers
+\setcounter{secnumdepth}{1}
+
+% For nicely typeset tabular material
+\usepackage{booktabs}
+
+% Prints the month name (e.g., January) and the year (e.g., 2008)
+\newcommand{\monthyear}{%
+  \ifcase\month\or January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or
+  December\fi\space\number\year
+}
+
+% Use AMS math
+\usepackage{amsmath}
+\usepackage{amsthm} % Use AMS theorem environments
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{defninition}
+\newtheorem{defn}{Definition}[chapter]
+\newtheorem{conj}{Conjecture}[chapter]
+\newtheorem{example}{Example}[chapter] % DE added
+\newtheorem{exercise}{Exercise}[chapter] % DE added
+\newtheorem{demo}{Demonstration}[chapter] % DE added
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{case}{Case}
+
+
+
+% Commands for Genus species names
 \newcommand{\species}[1]{\emph{#1}}
 
-% Commands for chapter author
-%\newcommand{\chauthor}[1]{\vspace{-0.5in}\flushleft {\emph{\large #1}}}
-%\newcommand{\chaffil}[1]{\vspace{-6pt}\flushleft \emph{\small #1}}
-
-\newcommand{\chauthor}[2]{%
-\vspace{-0.375in}{\flushleft {\emph{\large #1}}\\
-\emph{\small #2}}}
-
-% Other things that could be added:
-% comprehensive bibliography at end?
-% List of cited authors
-% Cute quotations and pictures for each chapter? 
-% Homework problems (and solutions?)
-% Tufte-like side comments? 
+% Formatting wish list:
+% Cute quotations and pictures for each chapter?  - use Tufte-latex defaults
+% Problems/exercises - would prefer to have something able to be made into exams? 
 
 
-% Title information
-\title{Biomechanics made Ridiculously Simple, Straightforward, and Interesting}
-\author{edited by at least Dennis Evangelista and Talia Y. Moore}
-\date{\today}
+
+
+
+
+% Book metadata
+\title{Comparative Biomechanics}
+\author{Dennis Evangelista and Talia Y.\ Moore}
+\publisher{Star Fleet University Press, San Francisco, CA}
 
 \begin{document}
-\maketitle
 
-\pagestyle{plain}
-\pagenumbering{roman}
+\frontmatter
+\maketitle
 \include{titlepage/titlepage}
 \include{dedication/dedication}
 \include{preface/preface}
-
-\addcontentsline{toc}{chapter}{Contents}
+\include{acknowledgements/acknowledgements}
 \tableofcontents
 \listoffigures
 \listoftables
 
-% chapters here
-\clearpage
-\pagestyle{plain}
-\pagenumbering{arabic}
+
+
+
+
+\mainmatter
 \include{ch-whybiomex/ch-whybiomex}
 \include{ch-solids/ch-solids}
 \include{ch-fluids/ch-fluids}
 
-% appendices here
 \appendix
 \include{app-test/test}
 
-\cleardoublepage
+\setcounter{secnumdepth}{-1} % Don't number bibliography and index
+\bibliographystyle{apalike}
+\bibliography{references/main}
+
 \pagestyle{plain}
-\addcontentsline{toc}{chapter}{Index}
+%\addcontentsline{toc}{chapter}{Index}
 \printindex
 \end{document}
