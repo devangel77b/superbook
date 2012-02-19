@@ -16,5 +16,6 @@ syntax: glob
 ._*
 *.ilg
 *.ind
+.DS_Store
 
 syntax: regexp
