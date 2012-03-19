@@ -32,7 +32,7 @@
 % use \cite commands
 % also appear collected at the end of the book
 %\usepackage{doi}
-\renewcommand*{\doi}[1]{\href{http://dx.doi.org/\detokenize{#1}}{doi: \detokenize{#1}}}
+\renewcommand*{\doi}[1]{\href{http://dx.doi.org/\detokenize{#1}}{doi:\detokenize{#1}}}
 
 % Get chapter numbers
 \setcounter{secnumdepth}{1}
@@ -115,7 +115,7 @@
 \include{app-test/test}
 
 \setcounter{secnumdepth}{-1} % Don't number bibliography and index
-\bibliographystyle{plainnat}
+\bibliographystyle{jeb}
 \nobibliography{references/main}
 
 \pagestyle{plain}
